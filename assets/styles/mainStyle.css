@@ -1,0 +1,60 @@
+.gallery {
+	width: 1080px;
+	margin: 0 auto;
+}
+
+.gallery div {
+	width:350px;
+	height: 350px;
+	display: inline-block;
+}
+
+@media screen and (min-width:1170px){
+  .gallery {
+    width:1024px;
+  }
+  .gallery div {
+    width:330px;
+    height:330px;
+  }
+}
+
+@media screen and (min-width:970px) and (max-width:1170px){
+  .gallery {
+    width:950px;
+  }
+  .gallery div {
+    width:310px;
+    height:310px;
+  }
+}
+
+@media screen and (min-width:600px) and (max-width:970px){
+  .gallery {
+    width:550px;
+  }
+  .gallery div {
+    width:265px;
+    height:265px;
+  }
+}
+
+@media screen and (min-width:480px) and (max-width:600px){
+  .gallery {
+    width:450px;
+  }
+  .gallery div {
+    width:220px;
+    height:220px;
+  }
+}
+
+@media screen and (min-width:320px) and (max-width:480px){
+  .gallery {
+    width:320px;
+  }
+  .gallery div {
+    width:315px;
+    height:315px;
+  }
+}
