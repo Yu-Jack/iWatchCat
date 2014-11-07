@@ -1,0 +1,30 @@
+<div id="gallery" class="gallery container-fluid">
+</div>
+
+<script type="text/jsx">
+
+/** @jsx React.DOM */
+
+var urlAll = [];
+<% for ( var i in histroy ) { %> 
+    urlAll.push("<%=histroy[i].url %>");
+<% } %>
+
+var All = React.createClass({
+    render: function(){
+        var image = this.props.url.map(function(m,index){
+            var divStyle = {
+                background: 'url(' + m +') center center no-repeat',
+                backgroundSize: 'cover'
+            };
+            var divClass = "col-md-4 col-xs-12";
+
+            return <div className = {divClass} style = {divStyle}></div>
+        });
+        return ( <div className="row">{image}</div>);
+    }
+});
+
+React.renderComponent(<All url={ urlAll }/>, document.getElementById('gallery'));
+
+</script>

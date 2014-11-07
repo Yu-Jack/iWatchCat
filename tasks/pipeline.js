@@ -30,7 +30,7 @@ var jsFilesToInject = [
   // Dependencies like jQuery, or Angular are brought in here
   'vendor/jquery/dist/jquery.min.js',
   'vendor/react/react.js',
-  'vendor/react/JSXTransformer.js',
+  //'vendor/react/JSXTransformer.js',
   'vendor/underscore/underscore-min.js',
 
   // All of the rest of your client-side js files
