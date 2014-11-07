@@ -6,10 +6,11 @@
 
 var urlAll = [];
 
-<% for(var i in history ) { %>
-    urlAll.push("<%=history[i].url%>");
+<% for(var i in histroy ) { %>
+    urlAll.push("<%=histroy[i].url%>");
 <% } %>
 
 React.renderComponent(React.createElement(All, { url:urlAll }), document.getElementById('gallery'));
 
 </script>
+
