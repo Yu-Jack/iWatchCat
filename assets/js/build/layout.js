@@ -19,6 +19,6 @@ var All = React.createClass({displayName: 'All',
 
             return React.createElement("div", {key: index, onClick:  _self.handleClick, className: divClass, style: divStyle, href: m })
         });
-        return ( <div className="row">{image}</div>);
+        return ( React.createElement("div", {className: "row"}, image));
     }
 });
