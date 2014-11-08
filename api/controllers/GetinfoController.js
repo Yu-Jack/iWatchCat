@@ -22,7 +22,6 @@ module.exports = {
 	getHistroy: function(req,res){
 		// get url to front-end view
 		UrlimgSrv.get().exec(function findData(err,found){
-			console.log(found.length);
 			return res.view('showurl' ,{
 				histroy : found
 			});

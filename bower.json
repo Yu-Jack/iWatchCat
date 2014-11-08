@@ -17,6 +17,7 @@
     "backbone": "~1.1.2",
     "react": "~0.12.0",
     "require": "*",
-    "bootstrap": "~3.3.0"
+    "bootstrap": "~3.3.0",
+    "colorbox": "~1.5.14"
   }
 }

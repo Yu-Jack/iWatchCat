@@ -1,7 +1,11 @@
 <div id="gallery" class="gallery container-fluid">
 </div>
-
-<script src="js/layout.js"></script>
+<div id="galler-colorbox">
+    <div class="image-view">
+        <img src="">
+    </div>
+</div>
+<script src="js/build/layout.js"></script>
 <script>
 
 var urlAll = [];
@@ -10,7 +14,5 @@ var urlAll = [];
     urlAll.push("<%=histroy[i].url%>");
 <% } %>
 
-React.renderComponent(React.createElement(All, { url:urlAll }), document.getElementById('gallery'));
-
+React.render(React.createElement(All, { url:urlAll }), document.getElementById('gallery'));
 </script>
-

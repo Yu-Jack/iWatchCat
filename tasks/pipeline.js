@@ -16,6 +16,7 @@
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
   'vendor/bootstrap/dist/css/bootstrap.css',
+  'vendor/colorbox/example3/colorbox.css',
   'styles/**/*.css'
 ];
 
@@ -29,9 +30,10 @@ var jsFilesToInject = [
 
   // Dependencies like jQuery, or Angular are brought in here
   'vendor/jquery/dist/jquery.min.js',
+  'vendor/colorbox/jquery.colorbox.js',
   'vendor/react/react.js',
   //'vendor/react/JSXTransformer.js',
-  'vendor/underscore/underscore-min.js',
+  'vendor/underscore/underscore-min.js'
 
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
