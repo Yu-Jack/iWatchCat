@@ -5,7 +5,8 @@ var All = React.createClass({
         $('#galler-colorbox').find('img').attr('src', $currentImg.attr('href'));
 
         $.colorbox({
-            html: $('#galler-colorbox').html()
+            html: $('#galler-colorbox').html(),
+            fixed: true
         });
     },
     render: function(){

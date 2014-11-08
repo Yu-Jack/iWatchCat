@@ -7,8 +7,8 @@
     border: 5px solid #FFF;
 }
 .image-view {
-    min-width: 500px;
-    max-width: 1000px;
+    min-width: 200px;
+    max-width: 800px;
 }
 .image-view img{
   max-width: 100%;
