@@ -35,11 +35,6 @@ module.exports.routes = {
   '/':{
     controller: 'UrlController',
     action: 'show'
-  },
-
-  'get /url':{
-    controller: 'UrlController',
-    action: 'show'
   }
 
   /***************************************************************************

@@ -32,6 +32,7 @@ var jsFilesToInject = [
   'vendor/jquery/dist/jquery.min.js',
   'vendor/colorbox/jquery.colorbox.js',
   'vendor/react/react.js',
+  'vendor/async/lib/async.js',
   //'vendor/react/JSXTransformer.js',
   'vendor/underscore/underscore-min.js'
 
