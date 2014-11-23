@@ -1,18 +1,40 @@
 <div id="gallery" class="gallery container-fluid">
 </div>
-<div id="galler-colorbox">
-    <div class="image-view">
-        <img src="">
-    </div>
-</div>
+<nav class="pagination">
+  <a class="next" href="/url/page/2"></a>
+</nav>
 <script src="js/build/layout.js"></script>
 <script>
-
-var urlAll = [];
+var urlAll = [],
+    initialColorbox = function(){
+        $('.image').colorbox({
+            rel: 'fuckyoubaby',
+            fixed: true,
+            photo: true,
+            maxWidth: '99%',
+            maxHeight: '99%'
+        });
+    };
 
 <% for(var i in histroy ) { %>
     urlAll.push("<%=histroy[i].url%>");
 <% } %>
 
 React.render(React.createElement(All, { url:urlAll }), document.getElementById('gallery'));
+initialColorbox();
+
+$('#gallery').infinitescroll({
+    navSelector : ".pagination",
+    nextSelector : ".pagination a.next",
+    dataType: 'json',
+    appendCallback: false
+}, function(array){
+    var urlAll = [];
+    for(var i in array.historys ) {
+        urlAll.push(array.historys[i].url);
+    }
+    React.render(React.createElement(All, { url:urlAll }), document.getElementById('gallery'));
+    initialColorbox();
+});
+
 </script>

@@ -5,6 +5,8 @@
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
 
+const PAGES = 42;
+
 module.exports = {
     new: function(req, res) {
         // save url from C# & node.js
@@ -47,11 +49,24 @@ module.exports = {
         });
     },
     show: function(req, res) {
-        // get url to front-end view
-        UrlimgSrv.get().exec(function findData(err, found) {
+        //get first 20 image
+        var myQuery = UrlimgSrv.get();
+        myQuery.limit(PAGES);
+        myQuery.exec(function findData(err, found) {
             return res.view('showurl', {
                 histroy: found
             });
+        });
+    },
+    page: function(req, res) {
+        var pageId = req.params.id,
+            myQuery = UrlimgSrv.get();
+
+        myQuery.limit(pageId*PAGES);
+
+        myQuery.exec(function callBack(err,results){
+            if (err) return res.serverError(err);
+            return res.json({historys: results});
         });
     }
 };

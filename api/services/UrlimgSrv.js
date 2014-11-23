@@ -15,5 +15,5 @@ module.exports.save = function(msg) {
 };
 
 module.exports.get = function() {
-    return Urlimg.find({});
+    return Urlimg.find();
 };
